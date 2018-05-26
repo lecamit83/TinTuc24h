@@ -198,7 +198,7 @@ const config = {
       flexWrap: 'wrap',
     },
     tabStyle: {
-      height: 20,
+      height: 32,
       justifyContent: 'center',
       alignItems: 'center',
     },

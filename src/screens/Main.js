@@ -1,17 +1,18 @@
 //import liraries
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import {Button, Icon} from "native-base";
+import Item from "../components/items/ArticleItem";
 
 // create a component
 class Main extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Main</Text>
-        <Button>
-          <Icon name="ios-radio-outline" />
-        </Button>
+        <ScrollView>
+        <Item />
+        <Item />
+        </ScrollView>
       </View>
     );
   }
@@ -21,7 +22,7 @@ class Main extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2c3e50"
+    backgroundColor: "#FFF"
   }
 });
 

@@ -35,7 +35,7 @@ class MainHeader extends Component {
           <Title>Tin tức 24h</Title>
         </Body>
         <Right>
-          <Button>
+          <Button transparent>
             <Icon name="search" />
           </Button>
         </Right>
