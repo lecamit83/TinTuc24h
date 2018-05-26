@@ -1,0 +1,25 @@
+export const XEM_NHIEU = "Xem nhiều";
+export const BAI_VIET = "Bài viết mới nhất";
+export const TIN_TUC = "Tin tức 24h";
+export const THE_THAO = "Thể thao";
+export const GIAI_TRI = "Giải trí";
+export const STAR = "Star";
+export const GIOI_TRE = "Giới trẻ";
+export const SUC_KHOE = "Sức khỏe";
+export const TAM_SU = "Tâm sự";
+export const GIA_DINH = "Gia đình";
+export const DEP_PLUS = "Đẹp +";
+export const KHAM_PHA = "Khám phá";
+export const DU_LICH = "Du lịch";
+export const THE_GIOI = "Thế giới";
+export const PHAP_LUAT = "Pháp luật";
+export const XA_HOI = "Xã hội";
+export const GIAO_DUC = "Giáo dục";
+export const GAME = "Game";
+export const XE = "Xe";
+export const THOI_SU = "Thời sự";
+export const KINH_DOANH = "Kinh doanh";
+export const HI_TEK = "Hi-Tek";
+export const DOI_SONG = "Đời sống";
+export const VIDEO = "Video";
+
