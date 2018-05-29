@@ -5,7 +5,7 @@ YellowBox.ignoreWarnings([
   "Module RCTImageLoader"
 ]);
 import { createStackNavigator, createDrawerNavigator } from "react-navigation";
-import Header from "../components/headers/Header";
+import Header from "../components/headers/DrawerHeader";
 import TabBar from "./TabBar";
 import SideMenu from "../screens/SideMenu";
 
@@ -25,6 +25,9 @@ const Route = createDrawerNavigator(
     TabNav: {
         screen: TabNav,
     },
+    DetailNav: {
+      screen: DetailNav,
+    }
   },
   {
     drawerWidth: width * 0.85,

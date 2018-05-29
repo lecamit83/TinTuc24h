@@ -16,7 +16,7 @@ import {
 import Icons from "react-native-vector-icons/Ionicons";
 import { colors } from "../../config/colors";
 // create a component
-class MainHeader extends Component {
+class DrawerHeader extends Component {
   constructor(props) {
     super(props);
   }
@@ -54,4 +54,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default MainHeader;
+export default DrawerHeader;

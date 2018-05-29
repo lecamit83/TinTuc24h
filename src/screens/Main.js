@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import {Button, Icon} from "native-base";
 import Item from "../components/items/ArticleItem";
 
@@ -10,6 +10,10 @@ class Main extends Component {
     return (
       <View style={styles.container}>
         <ScrollView>
+        <TouchableOpacity onPress={()=>this.props.navigation.navigate("DetailNav")} >
+        <Item />
+        </TouchableOpacity>
+        <Item />
         <Item />
         <Item />
         </ScrollView>
