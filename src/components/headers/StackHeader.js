@@ -27,7 +27,7 @@ class StackHeader extends Component {
     return (
       <Header style={{ backgroundColor: colors.HEADER_COLOR, marginLeft: 0 }}>
         <Left>
-          <Button transparent onPress={() => {}}>
+          <Button transparent onPress={() => {navigation.goBack()}}>
             <Icon name="arrow-back" />
           </Button>
         </Left>

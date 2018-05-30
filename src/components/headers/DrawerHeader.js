@@ -25,7 +25,7 @@ class DrawerHeader extends Component {
     const { navigation } = this.props;
 
     return (
-      <Header style={{ backgroundColor: colors.HEADER_COLOR, marginLeft: 0 }}>
+      <Header style={{ backgroundColor: colors.HEADER_COLOR}}>
         <Left>
           <Button transparent onPress={() => navigation.openDrawer()}>
             <Icon name="menu" />

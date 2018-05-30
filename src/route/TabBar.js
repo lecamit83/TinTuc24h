@@ -48,7 +48,7 @@ const StackNav = createStackNavigator(
 const routes = {
   XEM_NHIEU: {
     screen: StackNav,
-    navigationOptions: {
+    navigationOptions: {  
       title: XEM_NHIEU
     }
   },
@@ -207,21 +207,20 @@ const config = {
     upperCaseLabel: false,
     activeTintColor: "yellow",
     inactiveTintColor: "#FFF",
+    activeBackgroundColor: "yellow",
+    inactiveBackgroundColor: "#FFF",
     scrollEnabled: true,
     labelStyle: {
       fontSize: 12,
       fontWeight: "bold",
-      flexWrap: "wrap"
     },
     tabStyle: {
-      height: 32,
-      justifyContent: "center",
-      alignItems: "center"
+      width: 100,
+      height: 30,
     },
     style: {
       backgroundColor: colors.HEADER_COLOR
     },
-    pressOpacity: 0.5
   }
 };
 const TabBar = createMaterialTopTabNavigator(routes, config);

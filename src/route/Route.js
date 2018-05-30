@@ -6,8 +6,10 @@ YellowBox.ignoreWarnings([
 ]);
 import { createStackNavigator, createDrawerNavigator } from "react-navigation";
 import Header from "../components/headers/DrawerHeader";
+import SHeader from "../components/headers/StackHeader";
 import TabBar from "./TabBar";
 import SideMenu from "../screens/SideMenu";
+import Detail from "../screens/Detail";
 
 const {width, height} = Dimensions.get("window");
 
@@ -17,22 +19,40 @@ const TabNav = createStackNavigator({
     navigationOptions: ({ navigation }) => ({
       header: <Header navigation={navigation} />
     })
+  },
+  DetailNav: {
+    screen: Detail,
+    navigationOptions: ({ navigation }) => ({
+      header: <SHeader navigation={navigation} />
+    })
   }
 });
 
+const DetailDra = createStackNavigator({
+  DetailNav:{
+    screen: Detail,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header navigation={navigation} />
+    })
+  }
+})
+
+
+
 const Route = createDrawerNavigator(
   {
-    TabNav: {
+    TabDra: {
         screen: TabNav,
     },
-    DetailNav: {
-      screen: DetailNav,
+    DetailDra: {
+      screen: DetailDra,
     }
   },
   {
+    
     drawerWidth: width * 0.85,
-    initialRouteName: "TabNav",
-    contentComponent: props => <SideMenu {...props} />
+    initialRouteName: "TabDra",
+    contentComponent: props => <SideMenu {...props} />,
   }
 );
 

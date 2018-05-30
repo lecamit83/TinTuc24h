@@ -12,13 +12,19 @@ import {
   Content,
   Thumbnail
 } from "native-base";
+import { SafeAreaView } from "react-navigation";
 import { colors } from "../config/colors";
+import { XEM_NHIEU, BAI_VIET } from "../route/config";
 
 // create a component
 class SideMenu extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    const { navigation } = this.props;
     return (
-      <View style={{ flex: 1, backgroundColor: colors.HEADER_COLOR }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: colors.HEADER_COLOR }}>
         <View style={{ flex: 1, justifyContent: "center", paddingLeft: 16 }}>
           <Thumbnail
             source={{
@@ -28,8 +34,75 @@ class SideMenu extends Component {
           />
           <Text style={{ fontSize: 20, color: "#FFF" }}>Tin Tức 24h</Text>
         </View>
-        <Container style={{ flex: 3, backgroundColor: "#FFF" }}>
+        <View style={{ flex: 3, backgroundColor: "#FFF" }}>
           <List>
+            <ListItem icon>
+              <TouchableOpacity
+                style={{ flexDirection: "row" }}
+                onPress={() => {
+                  navigation.navigate("TabDra");
+                }}
+              >
+                <Left>
+                  <Icon name="medical" />
+                </Left>
+                <Body>
+                  <Text>{XEM_NHIEU}</Text>
+                </Body>
+                <Right>
+                  <Icon name="arrow-forward" />
+                </Right>
+              </TouchableOpacity>
+            </ListItem>
+            <ListItem icon>
+              <TouchableOpacity
+                style={{ flexDirection: "row" }}
+                onPress={() => {
+                  navigation.navigate("TabDra");
+                }}
+              >
+                <Left>
+                  <Icon name="medkit" />
+                </Left>
+                <Body>
+                  <Text>{BAI_VIET}</Text>
+                </Body>
+                <Right>
+                  <Icon name="arrow-forward" />
+                </Right>
+              </TouchableOpacity>
+            </ListItem>
+            <ListItem icon>
+              <TouchableOpacity
+                style={{ flexDirection: "row" }}
+                onPress={() => {
+                  navigation.navigate("DetailDra");
+                }}
+              >
+                <Left>
+                  <Icon name="cog" />
+                </Left>
+                <Body>
+                  <Text>Vật Tư & Thiết Bị Y Tế</Text>
+                </Body>
+                <Right>
+                  <Icon name="arrow-forward" />
+                </Right>
+              </TouchableOpacity>
+            </ListItem>
+            <ListItem icon>
+              <TouchableOpacity style={{ flexDirection: "row" }}>
+                <Left>
+                  <Icon name="color-filter" />
+                </Left>
+                <Body>
+                  <Text>Mỹ Phẩm</Text>
+                </Body>
+                <Right>
+                  <Icon name="arrow-forward" />
+                </Right>
+              </TouchableOpacity>
+            </ListItem>
             <ListItem icon>
               <TouchableOpacity style={{ flexDirection: "row" }}>
                 <Left>
@@ -43,65 +116,22 @@ class SideMenu extends Component {
                 </Right>
               </TouchableOpacity>
             </ListItem>
-
             <ListItem icon>
-              <Left>
-                <Icon name="medkit" />
-              </Left>
-              <Body>
-                <Text>Thực Phẩm Chức Năng</Text>
-              </Body>
-              <Right>
-                <Icon name="arrow-forward" />
-              </Right>
-            </ListItem>
-            <ListItem icon>
-              <Left>
-                <Icon name="cog" />
-              </Left>
-              <Body>
-                <Text>Vật Tư & Thiết Bị Y Tế</Text>
-              </Body>
-              <Right>
-                <Icon name="arrow-forward" />
-              </Right>
-            </ListItem>
-            <ListItem icon>
-              <Left>
-                <Icon name="color-filter" />
-              </Left>
-              <Body>
-                <Text>Mỹ Phẩm</Text>
-              </Body>
-              <Right>
-                <Icon name="arrow-forward" />
-              </Right>
-            </ListItem>
-            <ListItem icon>
-              <Left>
-                <Icon name="medical" />
-              </Left>
-              <Body>
-                <Text>Thuốc</Text>
-              </Body>
-              <Right>
-                <Icon name="arrow-forward" />
-              </Right>
-            </ListItem>
-            <ListItem icon>
-              <Left>
-                <Icon name="medical" />
-              </Left>
-              <Body>
-                <Text>Thuốc</Text>
-              </Body>
-              <Right>
-                <Icon name="arrow-forward" />
-              </Right>
+              <TouchableOpacity style={{ flexDirection: "row" }}>
+                <Left>
+                  <Icon name="medical" />
+                </Left>
+                <Body>
+                  <Text>Thuốc</Text>
+                </Body>
+                <Right>
+                  <Icon name="arrow-forward" />
+                </Right>
+              </TouchableOpacity>
             </ListItem>
           </List>
-        </Container>
-      </View>
+        </View>
+      </SafeAreaView>
     );
   }
 }
